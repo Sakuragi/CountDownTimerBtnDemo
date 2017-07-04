@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="com.example.administrator.countdowntimerbtndemo.activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_user"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="50dp">
+
+        <View
+            style="@style/DividerHorizontal"
+            android:layout_alignParentBottom="true"
+            android:background="#d3d2d6" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="8dp"
+            android:text="手机号"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_username"
+            style="@style/LoginEditTextStyle"
+            android:inputType="phone"
+            android:paddingLeft="88dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_ver_code"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_below="@id/layout_user"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="12dp">
+
+        <View
+            style="@style/DividerHorizontal"
+            android:layout_alignParentBottom="true"
+            android:background="#d3d2d6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="8dp"
+            android:textColor="#999999"
+            android:textSize="16sp"
+            android:text="验证码"/>
+
+        <com.example.administrator.countdowntimerbtndemo.widget.CountDownTimerButton
+            android:id="@+id/btn_get_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_btn_get_ver"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:text="获取验证码"
+            android:textColor="#666666"
+            android:textSize="13sp" />
+
+
+        <EditText
+            style="@style/LoginEditTextStyle"
+            android:layout_toLeftOf="@+id/btn_get_ver"
+            android:id="@+id/et_ver_code"
+            android:paddingLeft="88dp"
+            android:inputType="number" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_pw"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_below="@id/layout_ver_code"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="12dp">
+
+        <View
+            style="@style/DividerHorizontal"
+            android:layout_alignParentBottom="true"
+            android:background="#d3d2d6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="8dp"
+            android:textColor="#999999"
+            android:textSize="16sp"
+            android:text="密码　"/>
+
+        <EditText
+            style="@style/LoginEditTextStyle"
+            android:id="@+id/et_pw"
+            android:paddingLeft="88dp"
+            android:textColorHint="#CCCCCC"
+            android:hint="请输入密码"
+            android:imeOptions="actionUnspecified"
+            android:inputType="text"/>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_below="@id/layout_pw"
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        style="@style/UniversalPinkBtnStyle"/>
+
+
+</LinearLayout>

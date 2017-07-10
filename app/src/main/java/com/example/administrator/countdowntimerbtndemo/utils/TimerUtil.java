@@ -1,7 +1,5 @@
 package com.example.administrator.countdowntimerbtndemo.utils;
 
-import android.os.CountDownTimer;
-
 /**
  * Created by Jim on 2017/6/15.
  */
